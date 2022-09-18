@@ -29,6 +29,7 @@ type Mutation{
     login(email: String, password: String): Auth
     addBook(bookId: String!, authors: [String], description: String, image: String, title: String!, link: String): User
     deleteBook(bookId: String): User
-`
+}
+    `
 module.exports = typeDefs;
 
