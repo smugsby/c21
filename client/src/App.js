@@ -13,10 +13,10 @@ import {
 const http = createHttpLink({
   uri: "/graphql"
 })
-const auth = setContext((_, jwttoken)=>{
+const auth = setContext((_, headers)=>{
   const token = localStorage.getItem("id_token");
-  return {jwttoken:{
-    ...jwttoken, authorization: token
+  return {headers:{
+    ...headers, authorization: `Bearer ${token}`
   }}
 })
 const apolloclient = new ApolloClient({

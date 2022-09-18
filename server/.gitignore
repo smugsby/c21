@@ -1,0 +1,4 @@
+node_modules
+
+----mongo URI-c19 reference
+---server.js add process.env.Node_ENV value -p
