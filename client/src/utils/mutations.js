@@ -12,7 +12,7 @@ login(email: $email, password: $password) {
 `;
 
 export const addUser = gql`
-mutation addUser ($username: String, $email: String, $password: String) {
+mutation addUser ($username: String!, $email: String!, $password: String!) {
     addUser(username: $username , email: $email, password: $password) {
         token
         user {

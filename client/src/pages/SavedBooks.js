@@ -15,10 +15,10 @@ const SavedBooks = () => {
   const [bookMurderer] = useMutation(deleteBook);
   // use this to determine if `useEffect()` hook needs to run again
   const userDataLength = Object.keys(userData).length;
-  useEffect(() => {
-    const userData = data?.currentUser;
-    console.log(userData);
-    }, [data])
+  // useEffect(() => {
+  //   const userData = data?.currentUser;
+  //   console.log(userData);
+  //   }, [data])
 
   // useEffect(() => {
   //   const getUserData = async () => {

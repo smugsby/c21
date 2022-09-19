@@ -24,10 +24,10 @@ const resolvers = {
     //add mutations
     Mutation: {
         addUser: async(parent, arguement)=>{
-                const newUser = await User.create(arguement);
-                const token = signToken(newUser)
+                const user = await User.create(arguement);
+                const token = signToken(user)
                 return {
-                    token, newUser
+                    token, user
                 };
         },
         addBook: async(parent, book, context)=>{
